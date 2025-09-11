@@ -27,3 +27,61 @@ Para crear un panel de filament en el modulo necesitas ejecutar el siguente coma
 ``` bash
 php artisan module:filament:make-panel 
 ```
+
+Cunado ejecutas el comando te dan una serie de preguntas, para definir en que modulo vas a guardar el panel y 
+que nombre tendra la navegación del panel
+
+## Por el momento la libreria de modulos filament no registra los paneles (solucion)
+
+Dentro de la carpeta /bootstrap/ en el archivo providers.php en el return agrega los nuevos paneles con sus dirreciones ejem:
+
+``` bash
+<?php
+
+return [
+    App\Providers\AppServiceProvider::class,
+    App\Providers\Filament\AdminPanelProvider::class,
+
+
+    // paneles de modulos filament
+    Modules\Blog\Providers\Filament\TestPanelProvider::class,
+    Modules\Blog\Providers\Filament\Panel2PanelProvider::class,
+];
+```
+
+# Crear un resource 
+
+Para ejecutar este comando deves de tener almenos un model dentro del modulo en el que quieres trabajar este resource.
+
+comando para crear model y migracion dentro de un modulo:
+
+ 
+``` bash
+php artisan module:make-model nombre_modelo nombre_modulo -m
+```
+
+comando para crear el resource:
+
+``` bash
+php artisan module:filament:resource
+```
+
+
+Este comando te dara una serie de preguntas para que el resource quede bien ubicado.
+
+1 - Selecciona el modulo
+
+2 - Selecciona el model
+
+3 - Selecciona el columna de la tabla que quieres utilizar como nombre principal
+
+4 - Selecciona el panel
+
+
+
+
+
+
+
+
+
