@@ -1,0 +1,11 @@
+{
+    "name": "SENAEMPRESA",
+    "alias": "senaempresa",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\SENAEMPRESA\\Providers\\SENAEMPRESAServiceProvider"
+    ],
+    "files": []
+}
