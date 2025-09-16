@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
 use Coolsam\Modules\ModulesPlugin;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
@@ -28,7 +29,6 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
-            ->default()
             ->login()
             ->colors([
                 'primary' => Color::Amber,
@@ -57,6 +57,9 @@ class AdminPanelProvider extends PanelProvider
             ->authMiddleware([
                 Authenticate::class,
             ])
-            ->plugin(ModulesPlugin::make());
+            ->plugin(
+                FilamentShieldPlugin::make(),
+                ModulesPlugin::make()
+            );
     }
 }

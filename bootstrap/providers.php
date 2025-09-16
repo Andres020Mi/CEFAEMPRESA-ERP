@@ -2,10 +2,11 @@
 
 return [
     App\Providers\AppServiceProvider::class,
+    App\Providers\Filament\Admin2PanelProvider::class,
     App\Providers\Filament\AdminPanelProvider::class,
 
 
-    // paneles de modulos filament
-    Modules\Blog\Providers\Filament\TestPanelProvider::class,
-    Modules\Blog\Providers\Filament\Panel2PanelProvider::class,
+    // paneles de filament en modulos
+
+      Modules\Blog\Providers\Filament\Panel1PanelProvider::class,
 ];
