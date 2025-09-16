@@ -37,14 +37,19 @@ Para poder ejecutar comandos tienes que encontrarte en la hubicacion correcta, e
 
 El proyecto necesita de ciertas tecnologias las cuales pueden ser instaladas de la siguente forma. 
 
+
+composer 
+
 ```bash
-
    composer install
+```
 
+node 
+
+```bash
    npm install
 
 ```
-
 
 4. **Creacion del enviroment (.env)**
 
