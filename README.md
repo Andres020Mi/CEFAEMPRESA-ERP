@@ -1,87 +1,168 @@
-# CEFAEMPRESA-ERP
-CEFAEMPRESA es un ERP (gestor de recursos empresariales) diseñado para gestionar la SENA Empresa de el centro de formación agroindustrial la angostura SENA
+# ERP-CEFAEMPRESA
+
+Bienvenido al repositorio de **ERP-CEFAEMPRESA**, un sistema de **Enterprise Resource Planning (Planificación de Recursos Empresariales)** desarrollado para apoyar a **SENA Empresa**, ubicada en el Centro de Formación Agroindustrial.  
+
+Este proyecto busca **automatizar y digitalizar los procesos internos** de la organización, optimizando la gestión y mejorando la eficiencia en sus operaciones diarias.  
+
+---
+
+## 🚀 Tecnologías utilizadas
+
+El proyecto está construido como un **monolito escalable** en **Laravel v12**, gracias a la integración de las siguientes herramientas y paquetes:
+
+1. **[Filament v4](https://github.com/filamentphp/filament)** – Panel administrativo moderno y altamente personalizable.  
+2. **[Laravel Modules v12](https://github.com/nWidart/laravel-modules)** – Arquitectura modular para organizar y escalar el proyecto.  
+3. **[Filament en Módulos (coolsam/modules) v5](https://github.com/savannabits/filament-modules/blob/main/README.md)** – Integración de Filament con módulos para mayor flexibilidad.  
+4. **[Roles y Permisos (Filament Shield v4)](https://github.com/bezhanSalleh/filament-shield)** – Gestión avanzada de accesos basada en roles y permisos.  
+
+---
+
+## 🎯 Objetivo
+
+El propósito principal de este ERP es **brindar una solución integral para la gestión de recursos empresariales en SENA Empresa**, contribuyendo a:  
+
+- Automatización de procesos internos.  
+- Digitalización de la información.  
+- Escalabilidad y adaptabilidad a nuevas necesidades.  
+- Organización modular que facilita la mantenibilidad y evolución del sistema.  
+
+---
+
+## 📌 Estado del proyecto
+
+Este proyecto se encuentra en constante desarrollo y mejora. Cualquier aporte, sugerencia o retroalimentación es bienvenida para fortalecer el sistema y su impacto en la organización.  
+
+---
+
+## 🤝 Documentación
+
+Estos links proporcionan de manera detallada todo lo que necesitas saber para manipular el proyecto
+
+1. **[Instalación del proyecto](https://github.com/filamentphp/filament)**
+2. **[Crear un modulo dentro del proyecto](https://github.com/filamentphp/filament)**
+3. **[Implementación de filament dentro de un modulo](https://github.com/filamentphp/filament)**
+4. **[Creación de panneles en un modulo con filament](https://github.com/filamentphp/filament)**
+5. **[Creación de resources dentro de un panel que se encunetre en un modulo](https://github.com/filamentphp/filament)**
 
 
-# Creacion de modulo
+## 🤝 Instalación rapida para profecionales
 
-Para poder crear un modulo en el ERP necesitas ejecutar el siguente comando dentro de la carpeta del proyecto,
-esto se logra gracias a al libreria de https://github.com/nWidart/laravel-modules  "nwidart/laravel-modules": "^11.0|^12.0".
+1. **Clonar el repositorio**
 
-``` bash
-php artisan module:make nombre_modulo
-```
+Esto te agregara el proyecto dentro de una carpeta llamda CEFAEMPRESA-ERP.
 
-# Implementar filament dentro del modulo creado
+```bash
+   git clone https://github.com/Andres020Mi/CEFAEMPRESA-ERP.git
 
-En el ERP se trabaja con filament 4 por lo que se necesita implementar filament dentro de los modulso gracias a la libreria https://github.com/savannabits/filament-modules/blob/main/README.md  "name": "coolsam/modules","version": "v5.0.7"
-
-``` bash
-php artisan module:filament:install nombre_modulo
-```
-
-# Crear un panel dentro del modulo con filament
-
-Para crear un panel de filament en el modulo necesitas ejecutar el siguente comando una ves allas instalado coorrectamen filament en el modulo.
-
-
-``` bash
-php artisan module:filament:make-panel 
-```
-
-Cunado ejecutas el comando te dan una serie de preguntas, para definir en que modulo vas a guardar el panel y 
-que nombre tendra la navegación del panel
-
-## Por el momento la libreria de modulos filament no registra los paneles (solucion)
-
-Dentro de la carpeta /bootstrap/ en el archivo providers.php en el return agrega los nuevos paneles con sus dirreciones ejem:
-
-``` bash
-<?php
-
-return [
-    App\Providers\AppServiceProvider::class,
-    App\Providers\Filament\AdminPanelProvider::class,
-
-
-    // paneles de modulos filament
-    Modules\Blog\Providers\Filament\TestPanelProvider::class,
-    Modules\Blog\Providers\Filament\Panel2PanelProvider::class,
-];
-```
-
-# Crear un resource 
-
-Para ejecutar este comando deves de tener almenos un model dentro del modulo en el que quieres trabajar este resource.
-
-comando para crear model y migracion dentro de un modulo:
-
- 
-``` bash
-php artisan module:make-model nombre_modelo nombre_modulo -m
-```
-
-comando para crear el resource:
-
-``` bash
-php artisan module:filament:resource
 ```
 
 
-Este comando te dara una serie de preguntas para que el resource quede bien ubicado.
+2. **Ingresar la carpeta del proyecto**
 
-1 - Selecciona el modulo
+Para poder ejecutar comandos tienes que encontrarte en la hubicacion correcta, en este caso debes de ejecutar lo siguente. 
 
-2 - Selecciona el model
-
-3 - Selecciona el columna de la tabla que quieres utilizar como nombre principal
-
-4 - Selecciona el panel
+```bash
+   cd CEFAEMPRESA-ERP
+```
 
 
+3. **Instalar dependencias**
+
+El proyecto necesita de ciertas tecnologias las cuales pueden ser instaladas de la siguente forma. 
+
+
+composer 
+
+```bash
+   composer install
+```
+
+node 
+
+```bash
+   npm install
+
+```
+
+4. **Creacion del enviroment (.env)**
+
+El proyecto necestia este archivo ya que es donde se gaurdara variables de entornos para que todo este conectado.
+
+```bash
+
+   cp .env.example .env
+
+```
+
+
+5. **Crear la llave peronal del proyecto**
+
+Los proyectos de laravel necesitan de esta llave para su funcionamiento
+
+```bash
+
+   php artisan key:generate
+
+```
+
+
+6. **( opcional ) crear una base de datos sqlite para hacer pruebas rapidas**
+
+ laravel ya viene configurado para migrar las tablas  a sqlite, solo necesitas crear el archivo sqlite o puedes optar por configurar el .env para mysql 
+
+
+sqlite
+
+```bash
+
+   touch ./database/database.sqlite
+
+```
+
+mysql 
+
+```bash
+
+    # Antes 
+
+    DB_CONNECTION=sqlite
+    # DB_HOST=127.0.0.1
+    # DB_PORT=3306
+    # DB_DATABASE=laravel
+    # DB_USERNAME=root
+    # DB_PASSWORD=
+
+    # depues
+
+    DB_CONNECTION=mysql
+    # DB_HOST=127.0.0.1
+    # DB_PORT=3306
+    # DB_DATABASE= nombre_de_base_de_datos
+    # DB_USERNAME= root
+    # DB_PASSWORD=
+
+```
 
 
 
 
 
+7. **Migrar tablas con seeders**
 
+Tienes distintas opciones dependiendo de tu caso:
 
+Si necesitas desplegarlo de inmediato el siguente comando creara las tablas necesarias y agregara con seeders la informacion para que el software funcione.
+
+informacion del admin
+
+name: admin
+email: admin@gmail.com
+password: password
+
+rol: super_admin
+
+```bash
+
+   php artisan migrate --seed
+
+```
