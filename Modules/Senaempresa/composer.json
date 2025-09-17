@@ -1,0 +1,30 @@
+{
+    "name": "nwidart/senaempresa",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Senaempresa\\": "app/",
+            "Modules\\Senaempresa\\Database\\Factories\\": "database/factories/",
+            "Modules\\Senaempresa\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Senaempresa\\Tests\\": "tests/"
+        }
+    }
+}
