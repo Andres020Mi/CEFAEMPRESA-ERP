@@ -55,7 +55,7 @@ Una vez validados los cambios en main-test, se podrá crear la PR final hacia ma
 
 
 <p align="center">
-  <img src="./documentacion/img/flujo-trabajo.png" alt="Logo" width="60%" style="border-radius: 20%;"/>
+  <img src="./documentacion/img/flujo-trabajo.png" alt="flujo-trabajo" width="90%" style="border-radius: 20%;"/>
 </p>
 
 
