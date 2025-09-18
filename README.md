@@ -38,11 +38,11 @@ Este proyecto se encuentra en constante desarrollo y mejora. Cualquier aporte, s
 
 Estos links proporcionan de manera detallada todo lo que necesitas saber para manipular el proyecto
 
-1. **[Instalación del proyecto](https://github.com/filamentphp/filament)**
-2. **[Crear un modulo dentro del proyecto](https://github.com/filamentphp/filament)**
-3. **[Implementación de filament dentro de un modulo](https://github.com/filamentphp/filament)**
-4. **[Creación de panneles en un modulo con filament](https://github.com/filamentphp/filament)**
-5. **[Creación de resources dentro de un panel que se encunetre en un modulo](https://github.com/filamentphp/filament)**
+1. **[Instalación del proyecto](https://github.com/Andres020Mi/CEFAEMPRESA-ERP/blob/main/documentacion/v2/instalacion%20y%20despliegue.md)**
+2. **[Crear un modulo dentro del proyecto sin filament](https://github.com/Andres020Mi/CEFAEMPRESA-ERP/blob/main/documentacion/v2/modulos.md)**
+3. **[Implementación de filament dentro de un modulo o creacion de modulo con filament](https://github.com/Andres020Mi/CEFAEMPRESA-ERP/blob/main/documentacion/v2/modulos-filament.md)**
+4. **[Creación de panneles en un modulo con filament](https://github.com/Andres020Mi/CEFAEMPRESA-ERP/blob/main/documentacion/v2/modulos-filament-paneles.md)**
+5. **[Creación de resources dentro de un panel que se encunetre en un modulo](https://github.com/Andres020Mi/CEFAEMPRESA-ERP/blob/main/documentacion/v2/modulos-filament-resource.md)**
 
 # **Instalacion y despliegue del proyecto**
 
@@ -170,7 +170,7 @@ cd <nombre-carpeta>
 
 ---
 
-## ( 3 ) **Instalar de paquetespaquetes de PHP o librerías de Composer y paquetes de Node.js**
+## ( 3 ) **Instalacion de paquetespaquetes de PHP o librerías de Composer y paquetes de Node.js**
 
 Es importante instalar las tecnologias necesarias que necesita el proyecto para funcionar esto se encunetran en los archivos,
 composer.json , composer.lock , package-lock.json , package.json.
@@ -297,6 +297,8 @@ php artisan migrate:refresh
 
 ---
 
+
+
 ## **( 7 ) Roles y permisos**
 
 Este proyecto cuenta con un pligin de filament el cual utilizamos para poder utilizar roles y permisos, para que el super administrador funcione correctamente tienes que ejecutar los siguentes comandos.
@@ -304,12 +306,25 @@ Este proyecto cuenta con un pligin de filament el cual utilizamos para poder uti
 
 este comando scaneara cada permiso que se necesita en cada resource y te preguntara en que panel quieres crear una vista para el super administrador para que este administre los roles y permisos desde ahi.
 
+este comando te ara una serie de preguntas.
+
+1. en que panel quieres crear el administrador de roles y permisos
+
+2. luego preguntara unas cosas relacionada a el tipo de estructura para manejarlo, lo mejor que puedes hacer es dar enter 2 veses para que se guarde con una estructura de por defecto que ya funciona.
+
+
 ```bash
 php artisan shield:generate --all
 ```
 
+---
 
-## **( 7 ) seeders "no recomendado"**
+
+
+
+
+
+## **( 8 ) seeders "no recomendado"**
 
 Si quieres migrar lo seeders puedes ejecutar el siguente comando estos comadnos migran todos los seeders existentes en el proyecto.
 
@@ -330,17 +345,19 @@ php artisan migrate:refresh --seed
 ---
 
 
-## **( 8 ) seeders modulos**
+
+
+## **( 9 ) seeders modulos**
 
 El proyecto cuenta con una libreria de modulos que permite separar seeders en cada modulo de manera independiente, para ejecutarlos tienes que utilizar el siguente comando.
 
 ```bash
 php artisan module:seed <nombre-modulo>
 ```
-
 ---
 
-## **( 9 ) Despligue**
+
+## **( 10 ) Despligue**
 
 Por conveniencia el proyecto usa el siguente comando modificado para ejecutar el proyecto en windos:
 

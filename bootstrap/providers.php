@@ -7,7 +7,7 @@ return [
 
     // paneles de filament en modulos
     Modules\Senaempresa\Providers\Filament\SenaEmpresaPanelProvider::class,    
-    
+   
 ];
 
 
