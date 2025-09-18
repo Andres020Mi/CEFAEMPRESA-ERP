@@ -69,7 +69,7 @@ git clone https://github.com/Andres020Mi/CEFAEMPRESA-ERP.git
 
 Si quisieras descargar una rama en especifico del repo puedes utiliza el siguente comando.
 ```bash
-git clone --branch <rama> <url-del-repo>
+git clone --branch <rama> https://github.com/Andres020Mi/CEFAEMPRESA-ERP.git
 ```
 
 Si quieres que el proyecto se descargue con un nombre distinto para evitar conflictos de nombres ya existentes puedes utilizar el siguente comando para nombrar el proyecto como quieras.
@@ -167,16 +167,6 @@ en caso de que le coloques un nombre distinto a la carpeta puedes utilizarlo asi
 cd <nombre-carpeta>
 ```
 
----
-
-## ( 2 ) **Ingresar al proyecto**
-
-Es importa estar en la raiz del proyecto ya que desde ahi tendras que ejecutar comandos que te permitan utilizar de manera decuada este proyecto.
-
-Desde la terminal puedes ingresar a la carpeta creada utilizando el siguente comando.
-```bash
-cd CEFAEMPRESA-ERP
-```
 
 ---
 
