@@ -6,6 +6,8 @@ Es importante tener en cuneta que ya deves de tener creado algun modulo que teng
 
 este comando te ara una serie de preguntas para poder crear tu panel.
 
+
+
 1 . seleccione el modulo en el que quieres crear el panel
 
 2 . id o nombre del panal
@@ -52,3 +54,4 @@ return $panel
             ->path('blog/pruebax')
             ->login() # <--- Agregar esta linea
 ```
+

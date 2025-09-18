@@ -11,6 +11,8 @@ Este comando te permite instalar filament dentro del modulo, en caso de que no t
 
 te ara una serie de preguntas, las cuales es mejor darle yes a todo.
 
+!Importante que el nombre de tu modulo no este totalmente en mayusculas ya que la libreria separa con "-" cunado encunetra una mayuscula entre 2 letras si escribes ABCD te dara algo como A-B-C-D haciendo ilegible algunas acciones!
+
 ```bash
 php artisan module:filament:install <nombre-modulo>
 ```
