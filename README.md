@@ -1,24 +1,14 @@
 
+# ERP-CEFAEMPRESA
+
 <p align="center">
   <img src="./documentacion/img/logo.png" alt="Logo" width="60%" style="border-radius: 20%;"/>
 </p>
-
-# ERP-CEFAEMPRESA
 
 Bienvenido al repositorio de **ERP-CEFAEMPRESA**, un sistema de **Enterprise Resource Planning (Planificación de Recursos Empresariales)** desarrollado para apoyar a **SENA Empresa**, ubicada en el Centro de Formación Agroindustrial.  
 
 Este proyecto busca **automatizar y digitalizar los procesos internos** de la organización, optimizando la gestión y mejorando la eficiencia en sus operaciones diarias.  
 
----
-
-## 🚀 Tecnologías utilizadas
-
-El proyecto está construido como un **monolito escalable** en **Laravel v12**, gracias a la integración de las siguientes herramientas y paquetes:
-
-1. **[Filament v4](https://github.com/filamentphp/filament)** – Panel administrativo moderno y altamente personalizable.  
-2. **[Laravel Modules v12](https://github.com/nWidart/laravel-modules)** – Arquitectura modular para organizar y escalar el proyecto.  
-3. **[Filament en Módulos (coolsam/modules) v5](https://github.com/savannabits/filament-modules/blob/main/README.md)** – Integración de Filament con módulos para mayor flexibilidad.  
-4. **[Roles y Permisos (Filament Shield v4)](https://github.com/bezhanSalleh/filament-shield)** – Gestión avanzada de accesos basada en roles y permisos.  
 
 ---
 
@@ -39,7 +29,58 @@ Este proyecto se encuentra en constante desarrollo y mejora. Cualquier aporte, s
 
 ---
 
-## 🤝 Documentación
+# Metodologia de trabajo
+
+Se utilizara GitHub para almacenar el proyecto y diversificar sus verciones manteniendo el control de estas
+de una manera organizada y profecional. 
+
+Se utilizara Git para poder manejar las verciones y peticiones hacia GitHub
+
+Lo que utilizaremos son "Issues" para hacer peticiones a los desarolladores sobre que tienen que desarollar 
+
+Se utiilizaran PRs (Pull request) para que los desarolladores hagan marge (cambios de rama a rama) sobre las ramas 
+
+
+## Flujo de trabajo con ramas 
+
+Los desarrolladores que trabajen sobre un módulo deben crear una rama con el nombre del módulo.
+De esta rama se podrán derivar otras ramas secundarias para realizar cambios específicos sobre el mismo módulo.
+
+Todas las integraciones se harán mediante Pull Requests (PRs).
+
+Cuando la rama del módulo esté lista para ser enviada a producción, se deberá crear una PR hacia la rama main-test.
+La rama main-test funciona como un espejo de main, y sirve para verificar y probar los cambios antes de enviarlos definitivamente a producción.
+
+Una vez validados los cambios en main-test, se podrá crear la PR final hacia main, que representa el código en producción.
+
+
+<p align="center">
+  <img src="./documentacion/img/flujo-trabajo.png" alt="Logo" width="60%" style="border-radius: 20%;"/>
+</p>
+
+
+---
+
+# 🚀 Tecnologías utilizadas
+
+El proyecto está construido como un **monolito escalable** en **Laravel v12**, gracias a la integración de las siguientes herramientas y paquetes:
+
+1. **[Filament v4](https://github.com/filamentphp/filament)** – Panel administrativo moderno y altamente personalizable.  
+2. **[Laravel Modules v12](https://github.com/nWidart/laravel-modules)** – Arquitectura modular para organizar y escalar el proyecto.  
+3. **[Filament en Módulos (coolsam/modules) v5](https://github.com/savannabits/filament-modules/blob/main/README.md)** – Integración de Filament con módulos para mayor flexibilidad.  
+4. **[Roles y Permisos (Filament Shield v4)](https://github.com/bezhanSalleh/filament-shield)** – Gestión avanzada de accesos basada en roles y permisos.  
+
+
+|               |          |          |                              |
+|---------------|----------|----------|------------------------------|
+| php           |          |          |                              |
+| node npm      |          |          |  filament-module             |
+| mysql         | Laravel  | Filament |                              |
+| composer      |          |          |  filament-roles-permissions  |
+| sqlite        |          |          |                              |
+
+
+# 🤝 Documentación
 
 Estos links proporcionan de manera detallada todo lo que necesitas saber para manipular el proyecto
 
