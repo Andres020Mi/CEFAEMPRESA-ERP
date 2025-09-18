@@ -80,7 +80,23 @@ El proyecto está construido como un **monolito escalable** en **Laravel v12**, 
 | sqlite        |          |          |                              |
 
 
-# 🤝 Documentación
+# 📖 Documentación
+
+El proyecto dispone de una carpeta llamada documentacion ubicada en la raíz del repositorio.
+En ella encontrarás toda la información necesaria para comprender y trabajar en el proyecto de manera eficiente.
+
+Esta carpeta está organizada para que puedas acceder fácilmente a:
+
+📌 Guías por módulos: explicación detallada del funcionamiento de cada módulo del sistema.
+
+📌 Información relevante: aspectos generales del proyecto que todo desarrollador debe conocer.
+
+📌 Tutoriales de tecnologías: material de apoyo para aprender o reforzar el uso de las herramientas empleadas.
+
+📌 Solución de problemas: recopilación de errores comunes y sus pasos de resolución.
+
+En resumen, la carpeta de documentación es el punto de referencia principal para desarrolladores nuevos y existentes,
+ asegurando un acceso rápido y ordenado a todo el conocimiento del proyecto.
 
 Estos links proporcionan de manera detallada todo lo que necesitas saber para manipular el proyecto
 
