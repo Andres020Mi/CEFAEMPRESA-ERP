@@ -1,6 +1,13 @@
-# DOCUMENTACIÓN
+# 📘 Documentación del Proyecto
 
-Con el fin de apoyar a los desarolladores que realizan sus actividades en este proyecto, se creo una serie de archivos que contienen todo lo necesario para comprender como funciona el proyecto, ejemplos de uso y como solucionar errores en este.
+Con el fin de apoyar a los desarrolladores que participan en este proyecto, se ha creado una serie de archivos que contienen:
 
+- 📖 Explicación de cómo funciona el proyecto.  
+- 🛠️ Ejemplos de uso práctico.  
+- 🐞 Guías para la solución de errores comunes.  
 
-<img src="./img/20250918_1032_Slime Rosa Programador_simple_compose_01k5eq6g4gfxd8qv2tvwxzq6tq.png" alt="Logo" width="100%"/>
+---
+
+<p align="center">
+  <img src="./img/logo.png" alt="Logo" width="60%" style="border-radius: 20%;" />
+</p>

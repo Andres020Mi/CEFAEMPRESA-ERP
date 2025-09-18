@@ -1,3 +1,8 @@
+
+<p align="center">
+  <img src="./documentacion/img/logo.png" alt="Logo" width="60%" style="border-radius: 20%;"/>
+</p>
+
 # ERP-CEFAEMPRESA
 
 Bienvenido al repositorio de **ERP-CEFAEMPRESA**, un sistema de **Enterprise Resource Planning (Planificación de Recursos Empresariales)** desarrollado para apoyar a **SENA Empresa**, ubicada en el Centro de Formación Agroindustrial.  
