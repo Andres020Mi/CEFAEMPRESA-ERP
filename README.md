@@ -43,6 +43,20 @@ flowchart TD
     Apache --> Laravel
 ```
 
+```mermaid
+graph TD
+    Laravel["Laravel 12 (Monolito Escalable)"]
+
+    Filament["Filament v4<br/>Panel administrativo"]
+    Modules["Laravel Modules v12<br/>Arquitectura modular"]
+    FilamentModules["Filament Modules v5<br/>Filament en módulos"]
+    Shield["Filament Shield v4<br/>Roles y permisos"]
+
+    Laravel --> Filament
+    Laravel --> Modules
+    Modules --> FilamentModules
+    Filament --> Shield
+```
 
 ```geojson
 {
@@ -69,6 +83,8 @@ flowchart TD
     }
   ]
 }
+
+
 ```
 
 
