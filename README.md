@@ -19,70 +19,70 @@ CEFAEMPRESA-ERP es un ERP  "Enterprise Resource Planning" o Planificación de Re
 ```mermaid
 flowchart TD
     subgraph Lenguajes
-        PHP["PHP 8.4^"]
-        Node["Node.js 22.10.0^"]
+        PHP["🐘 PHP 8.4^"]
+        Node["🟢 Node.js 22.10.0^"]
     end
 
-    subgraph Gestores["Gestores de paquetes"]
+    subgraph Gestores["📦 Gestores de paquetes"]
         Composer["Composer 2.4.1^"]
         NPM["NPM 10.9.3^"]
     end
 
-    subgraph BD["Bases de datos"]
+    subgraph BD["🗄️ Bases de datos"]
         MySQL["MySQL (recomendado)"]
         SQLite["SQLite (rápido, BD pequeña)"]
     end
 
-    Apache["Servidor web: Apache 2.4.54"]
+    Apache["🌐 Servidor web: Apache 2.4.54"]
 
     PHP --> Composer
     Node --> NPM
-    Composer --> Laravel["Laravel 12"]
+    Composer --> Laravel["⚡ Laravel 12"]
     NPM --> Laravel
     BD --> Laravel
     Apache --> Laravel
 ```
 
+---
+
 ```mermaid
 graph TD
-    Laravel["Laravel 12 (Monolito Escalable)"]
+    subgraph Core["⚡ Laravel 12 (Monolito Escalable)"]
+        Filament["🎨 Filament v4<br/>Panel administrativo"]
+        Modules["📂 Laravel Modules v12<br/>Arquitectura modular"]
+        FilamentModules["🧩 Filament Modules v5<br/>Filament en módulos"]
+        Shield["🔐 Filament Shield v4<br/>Roles y permisos"]
+    end
 
-    Filament["Filament v4<br/>Panel administrativo"]
-    Modules["Laravel Modules v12<br/>Arquitectura modular"]
-    FilamentModules["Filament Modules v5<br/>Filament en módulos"]
-    Shield["Filament Shield v4<br/>Roles y permisos"]
+    DB[("🗄️ Base de datos<br/>MySQL / SQLite")]
 
     Laravel --> Filament
     Laravel --> Modules
     Modules --> FilamentModules
     Filament --> Shield
+    Filament --> DB
+    Modules --> DB
+
+
 ```
 
-```geojson
-{
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "id": 1,
-      "properties": {
-        "ID": 0
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-              [-90,35],
-              [-90,30],
-              [-85,30],
-              [-85,35],
-              [-90,35]
-          ]
-        ]
-      }
-    }
-  ]
-}
+---
+
+```mermaid
+flowchart LR
+    Dev["💻 Entorno local (PC)"] --> Git["🌐 Git / Repositorio"]
+    Git --> PHP["🐘 PHP 8.4+"]
+    Git --> Node["🟢 Node.js 22.10.0+"]
+    Git --> Composer["📦 Composer 2.4.1+"]
+    Git --> NPM["📦 NPM 10.9.3+"]
+
+    PHP --> Laravel["⚡ Framework Laravel 12"]
+    Node --> Laravel
+    Composer --> Laravel
+    NPM --> Laravel
+    Laravel --> Apache["🌐 Servidor Apache 2.4.54"]
+    Laravel --> DB["🗄️ Base de datos MySQL / SQLite"]
+    Apache --> Usuario["👤 Usuario Final (Navegador)"]
 
 
 ```
