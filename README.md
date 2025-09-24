@@ -6,62 +6,24 @@
 
 CEFAEMPRESA-ERP es un ERP  "Enterprise Resource Planning" o Planificación de Recursos Empresariales, que fue creado con el fin de apoyar a SENA Empresa que se encunetra en el centro de formación agroindustrial.
 
---
+---
 
 # **Metodologias de trabajo**
 
 
 
---
+---
 
 # **Tecnologias utilizadas**
 
-
-1) Diagrama de requerimientos tecnológicos
-
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
 ```
-flowchart TD
-    subgraph Lenguajes
-        PHP["PHP 8.4^"]
-        Node["Node.js 22.10.0^"]
-    end
-
-    subgraph Gestores["Gestores de paquetes"]
-        Composer["Composer 2.4.1^"]
-        NPM["NPM 10.9.3^"]
-    end
-
-    subgraph BD["Bases de datos"]
-        MySQL["MySQL (recomendado)"]
-        SQLite["SQLite (rápido, BD pequeña)"]
-    end
-
-    Apache["Servidor web: Apache 2.4.54"]
-
-    PHP --> Composer
-    Node --> NPM
-    Composer --> Laravel["Laravel 12"]
-    NPM --> Laravel
-    BD --> Laravel
-    Apache --> Laravel
-```
-2) Diagrama de arquitectura de herramientas usadas
-
-graph TD
-    Laravel["Laravel 12 (Monolito Escalable)"]
-
-    Filament["Filament v4<br/>Panel administrativo"]
-    Modules["Laravel Modules v12<br/>Arquitectura modular"]
-    FilamentModules["Filament Modules v5<br/>Filament en módulos"]
-    Shield["Filament Shield v4<br/>Roles y permisos"]
-
-    Laravel --> Filament
-    Laravel --> Modules
-    Modules --> FilamentModules
-    Filament --> Shield
-
-
---
+---
 
 
 # **Requerimientos para desplegar el proyectp**
@@ -102,5 +64,5 @@ apache httpd 2.4.54
 
 
 
---
+---
 
