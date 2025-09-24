@@ -17,11 +17,30 @@ CEFAEMPRESA-ERP es un ERP  "Enterprise Resource Planning" o Planificación de Re
 # **Tecnologias utilizadas**
 
 ```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+flowchart TD
+    subgraph Lenguajes
+        PHP["PHP 8.4^"]
+        Node["Node.js 22.10.0^"]
+    end
+
+    subgraph Gestores["Gestores de paquetes"]
+        Composer["Composer 2.4.1^"]
+        NPM["NPM 10.9.3^"]
+    end
+
+    subgraph BD["Bases de datos"]
+        MySQL["MySQL (recomendado)"]
+        SQLite["SQLite (rápido, BD pequeña)"]
+    end
+
+    Apache["Servidor web: Apache 2.4.54"]
+
+    PHP --> Composer
+    Node --> NPM
+    Composer --> Laravel["Laravel 12"]
+    NPM --> Laravel
+    BD --> Laravel
+    Apache --> Laravel
 ```
 ---
 
