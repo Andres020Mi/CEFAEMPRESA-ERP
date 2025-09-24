@@ -19,7 +19,7 @@ CEFAEMPRESA-ERP es un ERP  "Enterprise Resource Planning" o Planificación de Re
 
 1) Diagrama de requerimientos tecnológicos
 
-
+```
 flowchart TD
     subgraph Lenguajes
         PHP["PHP 8.4^"]
@@ -44,7 +44,7 @@ flowchart TD
     NPM --> Laravel
     BD --> Laravel
     Apache --> Laravel
-
+```
 2) Diagrama de arquitectura de herramientas usadas
 
 graph TD
