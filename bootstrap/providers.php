@@ -1,6 +1,6 @@
 <?php
 
-use Modules\Test\Providers\Filament\AdminTestPanelProvider;
+
 
 return [
     App\Providers\AppServiceProvider::class,
@@ -9,6 +9,6 @@ return [
     // Paneles de filament en modulos
 
     Modules\SenaEmpresa\Providers\Filament\AdminPanelProvider::class,
-    AdminTestPanelProvider::class,
+    
    
 ];

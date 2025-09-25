@@ -19,12 +19,12 @@ class UserForm
                     ->label('Email address')
                     ->email()
                     ->required(),
+                Select::make("roles")
+                ->label("Roles")
+                ->relationship("roles","name")
+                ->multiple()
+                ->preload(),
                 DateTimePicker::make('email_verified_at'),
-                  Select::make("roles")
-                    ->label("Roles")
-                    ->multiple()
-                    ->relationship("roles", "name")
-                    ->preload(),
                 TextInput::make('password')
                     ->password()
                     ->required(),

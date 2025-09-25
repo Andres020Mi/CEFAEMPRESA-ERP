@@ -170,6 +170,7 @@ return [
                 'update',
                 'delete',
             ],
+            
         ],
         'exclude' => [
             //

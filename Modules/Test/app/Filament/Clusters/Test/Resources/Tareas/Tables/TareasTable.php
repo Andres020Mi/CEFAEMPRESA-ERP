@@ -1,34 +1,24 @@
 <?php
 
-namespace App\Filament\Resources\Users\Tables;
+namespace Modules\Test\Filament\Clusters\Test\Resources\Tareas\Tables;
 
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
-use Filament\Tables\Columns\TagsColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
-class UsersTable
+class TareasTable
 {
     public static function configure(Table $table): Table
     {
         return $table
             ->columns([
-                TextColumn::make('name')
+                TextColumn::make('nombre')
                     ->searchable(),
-                TextColumn::make('email')
-                    ->label('Email address')
-                    ->badge()
-                    ->color("info")
+                TextColumn::make('descripcion')
                     ->searchable(),
-          
-                TagsColumn::make('roles.name')
-                    ->label('Roles')
-                    ->searchable()
-                    ->limit(3) // opcional, muestra máximo 3 tags y el resto como "+2"
-                    ->color('primary'), // colores bonitos para los chips
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
