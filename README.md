@@ -18,6 +18,33 @@ CEFAEMPRESA-ERP es un ERP  "Enterprise Resource Planning" o Planificación de Re
 
 
 
+```mermaid
+flowchart TD
+    subgraph Lenguajes
+        PHP["🐘 PHP 8.4^"]
+        Node["🟢 Node.js 22.10.0^"]
+    end
+
+    subgraph Gestores["📦 Gestores de paquetes"]
+        Composer["Composer 2.4.1^"]
+        NPM["NPM 10.9.3^"]
+    end
+
+    subgraph BD["🗄️ Bases de datos"]
+        MySQL["MySQL (recomendado)"]
+        SQLite["SQLite (rápido, BD pequeña)"]
+    end
+
+    Apache["🌐 Servidor web: Apache 2.4.54"]
+
+    PHP --> Composer
+    Node --> NPM
+    Composer --> Laravel["⚡ Laravel 12"]
+    NPM --> Laravel
+    BD --> Laravel
+    Apache --> Laravel
+```
+
 
 ---
 
@@ -132,7 +159,7 @@ Este archivo se crea con un comando que lo que hace es copiar un archivo llamado
 El comando es el siguente.
 
 ```bash
-   cp .env.exmaple .env
+   cp .env.example .env
 ```
 --
 
@@ -322,10 +349,19 @@ este comando te pedira el nombre del usaurio el correo y la contraseña, te reco
 
 luego de todo eso deberias de registrar los permisos de el proyecto para tener un sistem seguro contra personas que no tengan los permisos necesarios.
 
+este comando te preguntara en que paneles quieres los permisos, esribe 0 y dale enter 2 veses seguidas.
+
 ```bash
     php artisan shield:generate --all
 ```
 
+Por ultimo ejecuta este comando para darle super-administrador al usuario que creaste.
+
+este comando te preguntara en que panel va a estar asi que selecciona el 0.
+
+```bash
+    php artisan shield:super-admin
+```
 
 ### **( 9 ) Desplegar el proyecto**
 
