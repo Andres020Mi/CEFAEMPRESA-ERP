@@ -17,36 +17,64 @@ CEFAEMPRESA-ERP es un ERP  "Enterprise Resource Planning" o Planificación de Re
 # **Tecnologias utilizadas**
 
 
+Estas son las bases necesarias para ejecutar el proyecto Laravel:
+
+- [🐘 PHP 8.2+](https://www.php.net/)
+- [📦 Composer](https://getcomposer.org/)
+- [🟢 Node.js 20+ y NPM](https://nodejs.org/)
+- [🗄️ MySQL 8+](https://dev.mysql.com/downloads/mysql/) (o SQLite para entornos ligeros)
+- [🌐 Git](https://git-scm.com/)
 
 ```mermaid
 flowchart TD
     subgraph Lenguajes
-        PHP["🐘 PHP 8.4^"]
-        Node["🟢 Node.js 22.10.0^"]
+        PHP["🐘 PHP 8.2+"]
+        Node["🟢 Node.js 20+"]
     end
 
     subgraph Gestores["📦 Gestores de paquetes"]
-        Composer["Composer 2.4.1^"]
-        NPM["NPM 10.9.3^"]
+        Composer["Composer 2.x"]
+        NPM["NPM 10.x"]
     end
 
     subgraph BD["🗄️ Bases de datos"]
-        MySQL["MySQL (recomendado)"]
-        SQLite["SQLite (rápido, BD pequeña)"]
+        MySQL["MySQL 8+"]
+        SQLite["SQLite"]
     end
-
-    Apache["🌐 Servidor web: Apache 2.4.54"]
 
     PHP --> Composer
     Node --> NPM
     Composer --> Laravel["⚡ Laravel 12"]
     NPM --> Laravel
     BD --> Laravel
-    Apache --> Laravel
 ```
 
-
 ---
+
+# ⚡ Librerías y plugins de Laravel
+
+El proyecto utiliza las siguientes librerías para potenciar la arquitectura, el panel administrativo y la seguridad:
+
+1. **[Filament v4](https://github.com/filamentphp/filament)** – Panel administrativo moderno y personalizable.  
+2. **[Laravel Modules v12](https://github.com/nWidart/laravel-modules)** – Arquitectura modular para escalar el proyecto.  
+3. **[Filament en Módulos (coolsam/modules) v5](https://github.com/savannabits/filament-modules)** – Integración de Filament con módulos.  
+4. **[Roles y Permisos (Filament Shield v4)](https://github.com/bezhanSalleh/filament-shield)** – Gestión de accesos basada en roles y permisos.  
+
+```mermaid
+flowchart TD
+    Laravel["⚡ Laravel 12"]
+
+    Filament["📊 Filament v4"]
+    Modules["📂 Laravel Modules v12"]
+    FilamentModules["🧩 Filament en Módulos v5"]
+    Shield["🛡️ Filament Shield v4"]
+
+    Laravel --> Filament
+    Laravel --> Modules
+    Modules --> FilamentModules
+    Filament --> Shield
+```
+
 
 
 # **Requerimientos para desplegar el proyecto**
