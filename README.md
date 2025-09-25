@@ -165,6 +165,12 @@ Puedes utilizar sqlite que ya viene por defecto, osea que no tienes que hacer na
     # DB_PASSWORD=
 ```
 
+solo recuerda ejecutar este comando para crear el archivo donde se guardara la base de datos.
+
+
+```bash
+    touch ./database/database.sqlite
+```
 
 Tambien puedes utilizar mysql, en este caso tienes que configurar tu .env y crear la base de datos para qeu todo funcione correctamente.
 
@@ -288,9 +294,46 @@ O
 
 --
 
-### **( 7 ) Base de datos**
+### **( 7 ) Migraciones**
+
+Es importante que migres las tablas del proyecto para que todo funcione correctamente, puedes ralizar este proceso con lo siguente.
 
 
+```bash
+    php artisan migrate
+```
+
+--
+
+### **( 8 ) crear tu usuario y configurar los permisos necesarios**
+
+Tienes que tener un usuario para poder utilizar el software, esto lo puedes hacer mediante el siguente comando.
+
+
+este comando te pedira el nombre del usaurio el correo y la contraseña, te recomiendo usar las sigunetes credenciales.
+
+- name : admin
+- email : admin@gmail.com 
+- password : password
+
+```bash
+    php artisan make:filament-user
+```
+
+luego de todo eso deberias de registrar los permisos de el proyecto para tener un sistem seguro contra personas que no tengan los permisos necesarios.
+
+```bash
+    php artisan shield:generate --all
+```
+
+
+### **( 9 ) Desplegar el proyecto**
+
+Emos creado un comando para ejecutarlo en windos sin ningun problema el cual es.
+
+```bash
+    composer run dev:windos
+```
 
 
 

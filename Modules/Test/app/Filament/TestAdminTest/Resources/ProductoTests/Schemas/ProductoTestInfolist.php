@@ -1,0 +1,16 @@
+<?php
+
+namespace Modules\Test\Filament\TestAdminTest\Resources\ProductoTests\Schemas;
+
+use Filament\Schemas\Schema;
+
+class ProductoTestInfolist
+{
+    public static function configure(Schema $schema): Schema
+    {
+        return $schema
+            ->components([
+                //
+            ]);
+    }
+}

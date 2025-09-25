@@ -1,3 +1,5 @@
 {
-    "SenaEmpresa": true
+    "SenaEmpresa": true,
+    "SystemManager": true,
+    "Test": true
 }
